@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minutes of Meeting - Faculty Executive Council</title>
+    <style>
+        :root {
+            --paper-white: #ffffff;
+            --text-dark: #333;
+            --accent-blue: #1a5f7a;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Times New Roman', Times, serif;
+            color: var(--text-dark);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* A4 Styling */
+        .paper {
+            background: var(--paper-white);
+            width: 210mm;
+            min-height: 297mm;
+            padding: 25mm;
+            margin: 10px auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-blue);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+        }
+
+        h1 { margin: 0; font-size: 22px; color: var(--accent-blue); text-transform: uppercase; }
+        .meta-info { margin-top: 10px; font-style: italic; display: flex; justify-content: space-between; }
+
+        section { margin-bottom: 20px; }
+        h2 { font-size: 18px; border-bottom: 1px solid #ccc; padding-bottom: 5px; color: var(--accent-blue); }
+
+        .attendance-list { font-weight: bold; margin-bottom: 15px; }
+        
+        p, li { line-height: 1.6; font-size: 16px; text-align: justify; }
+
+        .footer { margin-top: 50px; display: flex; justify-content: space-between; }
+        .sig-line { border-top: 1px solid #000; width: 200px; text-align: center; margin-top: 40px; }
+
+        /* Buttons */
+        .controls { margin-bottom: 20px; }
+        button {
+            padding: 10px 20px;
+            background: var(--accent-blue);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: Arial, sans-serif;
+        }
+
+        @media print {
+            body { background: none; padding: 0; }
+            .controls { display: none; }
+            .paper { box-shadow: none; margin: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="controls">
+        <button onclick="window.print()">Download as PDF / Print</button>
+    </div>
+
+    <div class="paper" id="minutes">
+        <header>
+            <h1>Minutes of the Faculty Executive Council Meeting</h1>
+            <div class="meta-info">
+                <span><strong>Date:</strong> January 14, 2026</span>
+                <span><strong>Venue:</strong> Faculty Secretariat </span>
+            </div>
+        </header>
+
+        <section>
+            <h2>1. Call to Order</h2>
+            <p>The meeting was officially called to order by the President at <strong>10:30 AM</strong>.</p>
+        </section>
+
+        <section>
+            <h2>2. Attendance</h2>
+            <p class="attendance-list">Present Executives:</p>
+            <ul>
+                <li>The President</li>
+                <li>The Vice President</li>
+                <li>The General Secretary</li>
+                <li>The Assistant General Secretary</li>
+                <li>The Social Director</li>
+                <li>The Public Relations Officer (PRO)</li>
+                <li> The Sports Director </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>3. Matters Arising / Project Updates</h2>
+            <ul>
+                <li><strong>Proposed Student Hub:</strong> The President moved the motion to prioritize the General Secretary's proposal. The General Secretary presented the blueprint for the "Student Hub," designed to centralize student resources.</li>
+                <li><strong>Faculty Portal:</strong> Discussion moved to the ongoing development of the Faculty Portal. It was noted that this project is currently in the "pending/ongoing" phase as consultations between the President and the technical lead (Zach) are currently active.</li>
+                <li><strong>Executive Initiatives:</strong> The Vice President outlined a roadmap for upcoming events, including the Student Orientation program, Faculty Football Tournament, and the Freshers' Night. These will be formally proposed to the panel for approval.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>4. Financials & Transparency</h2>
+            <ul>
+                <li><strong>Internal Accountability:</strong> The Social Director raised concerns regarding financial transparency, specifically requesting insights into private assessments. While the complexity of certain private assessments was acknowledged, the council reached a consensus on maintaining understandable reporting standards.</li>
+                <li><strong>Dues & Remittance:</strong> The President announced a 60/40 split for departmental and faculty dues respectively. Faculty dues for the session have been fixed at <strong>₦6,000</strong>.</li>
+                <li><strong>Payment System:</strong> To improve efficiency, the current payment portal is being decommissioned in favor of a new, more robust platform.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>5. Adjournment</h2>
+            <p>Updates regarding the new payment portal will be released to the student body shortly. The next meeting is scheduled for <strong>Monday next week</strong>.</p>
+            <p>The President moved for the adjournment of the meeting, which ended at <strong>11:35 AM</strong>.</p>
+        </section>
+
+        <div class="footer">
+            <div class="sig-line">
+                <p>General Secretary</p>
+            </div>
+            <div class="sig-line">
+                <p>President</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Optional: Logic to auto-fill current date if needed
+        console.log("Minutes Document Loaded Successfully");
+    </script>
+</body>
+</html>
