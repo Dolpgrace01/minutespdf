@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Memorandum - Registration Procedures</title>
+    <title>Official Memorandum - NACOS</title>
     <style>
         :root {
             --paper-white: #ffffff;
             --text-dark: #222;
-            --accent-navy: #0a2e3d;
+            --nacos-green: #006837;
         }
 
         body {
@@ -22,38 +22,26 @@
             align-items: center;
         }
 
-        /* A4 Styling */
+        /* A4 Styling with Background Image */
         .paper {
             background: var(--paper-white);
+            background-image: url('image.png'); /* CITE: Provided image.png as background */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
             width: 210mm;
             min-height: 297mm;
-            padding: 25mm;
+            padding: 45mm 25mm 30mm 25mm; /* Extra top padding to clear the letterhead header */
             margin: 10px auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             box-sizing: border-box;
             position: relative;
         }
 
-        header {
-            text-align: center;
-            border-bottom: 3px double var(--accent-navy);
-            margin-bottom: 30px;
-            padding-bottom: 10px;
-        }
-
-        .memo-title {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: 5px;
-            margin: 0;
-            color: var(--accent-navy);
-        }
-
         .memo-meta {
-            margin-top: 25px;
+            margin-top: 10px;
             font-size: 17px;
-            border-bottom: 1px solid #000;
+            border-bottom: 2px solid var(--nacos-green);
             padding-bottom: 15px;
         }
 
@@ -72,43 +60,35 @@
         
         p, li { line-height: 1.6; font-size: 17px; text-align: justify; }
 
-        .sub-header {
-            font-weight: bold;
-            text-decoration: underline;
-            margin-top: 20px;
-        }
-
         .schedule-box {
-            background: #f9f9f9;
-            border-left: 4px solid var(--accent-navy);
+            background: rgba(0, 104, 55, 0.05);
+            border-left: 4px solid var(--nacos-green);
             padding: 10px 20px;
             margin: 15px 0;
         }
 
         .footer-sigs {
-            margin-top: 60px;
+            margin-top: 50px;
             display: flex;
             justify-content: space-between;
         }
 
         .sig-block {
-            text-align: center;
+            text-align: left;
             width: 250px;
+            font-size: 16px;
         }
 
-        .sig-line {
-            border-top: 1px solid #000;
-            margin-top: 50px;
-            padding-top: 5px;
-            font-weight: bold;
-            font-size: 15px;
+        .signed-text {
+            font-style: italic;
+            margin-bottom: 5px;
         }
 
         /* Print Controls */
         .controls { margin-bottom: 20px; }
         button {
             padding: 10px 25px;
-            background: var(--accent-navy);
+            background: var(--nacos-green);
             color: white;
             border: none;
             border-radius: 4px;
@@ -119,7 +99,7 @@
         @media print {
             body { background: none; padding: 0; }
             .controls { display: none; }
-            .paper { box-shadow: none; margin: 0; }
+            .paper { box-shadow: none; margin: 0; -webkit-print-color-adjust: exact; }
         }
     </style>
 </head>
@@ -130,10 +110,6 @@
     </div>
 
     <div class="paper">
-        <header>
-            <h1 class="memo-title">MEMORANDUM</h1>
-        </header>
-
         <div class="memo-meta">
             <div class="meta-row">
                 <span class="meta-label">TO:</span>
@@ -149,7 +125,7 @@
             </div>
             <div class="meta-row">
                 <span class="meta-label">SUBJECT:</span>
-                <span style="font-weight: bold;">UPDATED REGISTRATION PROCEDURES FOR FRESHMEN</span>
+                <span style="font-weight: bold; text-decoration: underline;">UPDATED REGISTRATION PROCEDURES FOR FRESHMEN</span>
             </div>
         </div>
 
@@ -170,16 +146,14 @@
 
         <div class="footer-sigs">
             <div class="sig-block">
-                <div class="sig-line">
-                    Adeyemi Abdulazeez<br>
-                    <small>Faculty Welfare Director</small>
-                </div>
+                <p class="signed-text">Signed:</p>
+                <strong>Adeyemi Abdulazeez</strong><br>
+                Faculty Welfare Director
             </div>
             <div class="sig-block">
-                <div class="sig-line">
-                    Obidare Ibrahim Boluwatife<br>
-                    <small>General Secretary</small>
-                </div>
+                <p class="signed-text">Signed:</p>
+                <strong>Obidare Ibrahim Boluwatife</strong><br>
+                General Secretary
             </div>
         </div>
     </div>
