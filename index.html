@@ -25,29 +25,47 @@
         /* A4 Styling with Background Image */
         .paper {
             background: var(--paper-white);
-            background-image: url('image.png'); /* CITE: Provided image.png as background */
+            background-image: url('image.png'); 
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
             width: 210mm;
             min-height: 297mm;
-            padding: 45mm 25mm 30mm 25mm; /* Extra top padding to clear the letterhead header */
+            padding: 45mm 25mm 30mm 25mm; 
             margin: 10px auto;
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
             box-sizing: border-box;
             position: relative;
         }
 
+        /* Re-added Header Styling */
+        header {
+            text-align: center;
+            border-bottom: 3px double var(--nacos-green);
+            margin-bottom: 20px;
+            padding-bottom: 5px;
+        }
+
+        .memo-title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            font-weight: 900;
+            letter-spacing: 6px;
+            margin: 0;
+            color: var(--nacos-green);
+            text-transform: uppercase;
+        }
+
         .memo-meta {
             margin-top: 10px;
             font-size: 17px;
-            border-bottom: 2px solid var(--nacos-green);
+            border-bottom: 1.5px solid var(--nacos-green);
             padding-bottom: 15px;
         }
 
         .meta-row {
             display: flex;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }
 
         .meta-label {
@@ -56,7 +74,7 @@
             text-transform: uppercase;
         }
 
-        section { margin-top: 30px; }
+        section { margin-top: 25px; }
         
         p, li { line-height: 1.6; font-size: 17px; text-align: justify; }
 
@@ -81,7 +99,7 @@
 
         .signed-text {
             font-style: italic;
-            margin-bottom: 5px;
+            margin-bottom: 2px;
         }
 
         /* Print Controls */
@@ -110,6 +128,10 @@
     </div>
 
     <div class="paper">
+        <header>
+            <h1 class="memo-title">MEMORANDUM</h1>
+        </header>
+
         <div class="memo-meta">
             <div class="meta-row">
                 <span class="meta-label">TO:</span>
