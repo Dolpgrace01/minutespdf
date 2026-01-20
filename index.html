@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minutes of Meeting - Faculty Executive Council</title>
+    <title>Memorandum - Registration Procedures</title>
     <style>
         :root {
             --paper-white: #ffffff;
-            --text-dark: #333;
-            --accent-blue: #1a5f7a;
+            --text-dark: #222;
+            --accent-navy: #0a2e3d;
         }
 
         body {
@@ -36,34 +36,84 @@
 
         header {
             text-align: center;
-            border-bottom: 2px solid var(--accent-blue);
-            margin-bottom: 20px;
+            border-bottom: 3px double var(--accent-navy);
+            margin-bottom: 30px;
             padding-bottom: 10px;
         }
 
-        h1 { margin: 0; font-size: 22px; color: var(--accent-blue); text-transform: uppercase; }
-        .meta-info { margin-top: 10px; font-style: italic; display: flex; justify-content: space-between; }
+        .memo-title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 5px;
+            margin: 0;
+            color: var(--accent-navy);
+        }
 
-        section { margin-bottom: 20px; }
-        h2 { font-size: 18px; border-bottom: 1px solid #ccc; padding-bottom: 5px; color: var(--accent-blue); }
+        .memo-meta {
+            margin-top: 25px;
+            font-size: 17px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 15px;
+        }
 
-        .attendance-list { font-weight: bold; margin-bottom: 15px; }
+        .meta-row {
+            display: flex;
+            margin-bottom: 8px;
+        }
+
+        .meta-label {
+            width: 100px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        section { margin-top: 30px; }
         
-        p, li { line-height: 1.6; font-size: 16px; text-align: justify; }
+        p, li { line-height: 1.6; font-size: 17px; text-align: justify; }
 
-        .footer { margin-top: 50px; display: flex; justify-content: space-between; }
-        .sig-line { border-top: 1px solid #000; width: 200px; text-align: center; margin-top: 40px; }
+        .sub-header {
+            font-weight: bold;
+            text-decoration: underline;
+            margin-top: 20px;
+        }
 
-        /* Buttons */
+        .schedule-box {
+            background: #f9f9f9;
+            border-left: 4px solid var(--accent-navy);
+            padding: 10px 20px;
+            margin: 15px 0;
+        }
+
+        .footer-sigs {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sig-block {
+            text-align: center;
+            width: 250px;
+        }
+
+        .sig-line {
+            border-top: 1px solid #000;
+            margin-top: 50px;
+            padding-top: 5px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+
+        /* Print Controls */
         .controls { margin-bottom: 20px; }
         button {
-            padding: 10px 20px;
-            background: var(--accent-blue);
+            padding: 10px 25px;
+            background: var(--accent-navy);
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            font-family: Arial, sans-serif;
+            font-weight: bold;
         }
 
         @media print {
@@ -76,75 +126,63 @@
 <body>
 
     <div class="controls">
-        <button onclick="window.print()">Download as PDF / Print</button>
+        <button onclick="window.print()">Download Official Memo (PDF)</button>
     </div>
 
-    <div class="paper" id="minutes">
+    <div class="paper">
         <header>
-            <h1>Minutes of the Faculty Executive Council Meeting</h1>
-            <div class="meta-info">
-                <span><strong>Date:</strong> January 14, 2026</span>
-                <span><strong>Venue:</strong> Faculty Secretariat </span>
-            </div>
+            <h1 class="memo-title">MEMORANDUM</h1>
         </header>
 
-        <section>
-            <h2>1. Call to Order</h2>
-            <p>The meeting was officially called to order by the President at <strong>10:30 AM</strong>.</p>
-        </section>
-
-        <section>
-            <h2>2. Attendance</h2>
-            <p class="attendance-list">Present Executives:</p>
-            <ul>
-                <li>The President</li>
-                <li>The Vice President</li>
-                <li>The General Secretary</li>
-                <li>The Assistant General Secretary</li>
-                <li>The Social Director</li>
-                <li>The Public Relations Officer (PRO)</li>
-                <li> The Sports Director </li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>3. Matters Arising / Project Updates</h2>
-            <ul>
-                <li><strong>Proposed Student Hub:</strong> The President moved the motion to prioritize the General Secretary's proposal. The General Secretary presented the blueprint for the "Student Hub," designed to centralize student resources.</li>
-                <li><strong>Faculty Portal:</strong> Discussion moved to the ongoing development of the Faculty Portal. It was noted that this project is currently in the "pending/ongoing" phase as consultations between the President and the technical lead are currently active.</li>
-                <li><strong>Executive Initiatives:</strong> The Vice President outlined a roadmap for upcoming events, including the Student Orientation program, Faculty Football Tournament, and the Freshers' Night. These will be formally proposed to the panel for approval.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>4. Financials & Transparency</h2>
-            <ul>
-                <li><strong>Internal Accountability:</strong> The Social Director raised concerns regarding financial transparency, specifically requesting insights into private assessments. While the complexity of certain private assessments was acknowledged, the council reached a consensus on maintaining understandable reporting standards.</li>
-                <li><strong>Dues & Remittance:</strong> The President announced a 60/40 split for departmental and faculty dues respectively. Faculty dues for the session have been fixed at <strong>₦6,000</strong>.</li>
-                <li><strong>Payment System:</strong> To improve efficiency, the current payment portal is being decommissioned in favor of a new, more robust platform.</li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>5. Adjournment</h2>
-            <p>Updates regarding the new payment portal will be released to the student body shortly. The next meeting is scheduled for <strong>Monday next week</strong>.</p>
-            <p>The President moved for the adjournment of the meeting, which ended at <strong>11:35 AM</strong>.</p>
-        </section>
-
-        <div class="footer">
-            <div class="sig-line">
-                <p>General Secretary</p>
+        <div class="memo-meta">
+            <div class="meta-row">
+                <span class="meta-label">TO:</span>
+                <span>Departmental Welfare Directors</span>
             </div>
-            <div class="sig-line">
-                <p>President</p>
+            <div class="meta-row">
+                <span class="meta-label">FROM:</span>
+                <span>Office of the Faculty Welfare Director</span>
+            </div>
+            <div class="meta-row">
+                <span class="meta-label">DATE:</span>
+                <span>January 20, 2026</span>
+            </div>
+            <div class="meta-row">
+                <span class="meta-label">SUBJECT:</span>
+                <span style="font-weight: bold;">UPDATED REGISTRATION PROCEDURES FOR FRESHMEN</span>
+            </div>
+        </div>
+
+        <section>
+            <p><strong>1. SUBMISSION OF ACCEPTANCE RECEIPTS</strong></p>
+            <p>All freshmen are hereby notified that Acceptance Receipts should be submitted at their Department’s School Office, rather than the Bursary or Administrative offices. Please note that the receipt must be submitted alongside the Eligibility Form.</p>
+
+            <p><strong>2. COLLECTION FOR PREVIOUS SUBMISSIONS</strong></p>
+            <p>Students who previously submitted their receipts to other offices are required to gather for collection and redirection at the <strong>School Pavilion</strong> as per the schedule below:</p>
+
+            <div class="schedule-box">
+                <p>• <strong>First Slot:</strong> 10:30 AM</p>
+                <p>• <strong>Second Slot:</strong> 02:30 PM (For those unable to make the morning session)</p>
+            </div>
+
+            <p>Welfare Directors are directed to ensure this information reaches every student within their respective jurisdictions immediately to avoid further delays in registration.</p>
+        </section>
+
+        <div class="footer-sigs">
+            <div class="sig-block">
+                <div class="sig-line">
+                    Adeyemi Abdulazeez<br>
+                    <small>Faculty Welfare Director</small>
+                </div>
+            </div>
+            <div class="sig-block">
+                <div class="sig-line">
+                    Obidare Ibrahim Boluwatife<br>
+                    <small>General Secretary</small>
+                </div>
             </div>
         </div>
     </div>
 
-    <script>
-        // Optional: Logic to auto-fill current date if needed
-        console.log("Minutes Document Loaded Successfully");
-    </script>
 </body>
-
 </html>
