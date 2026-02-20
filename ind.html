@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creative & Professional Resume</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --text-dark: #333;
+            --text-light: #f4f4f4;
+            --bg-gray: #ecf0f1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-gray);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+
+        .resume-container {
+            background: white;
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Sidebar Styling */
+        .sidebar {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 40px 30px;
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            background: #ddd;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 4px solid var(--accent-color);
+        }
+
+        .sidebar h2 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+
+        .sidebar-item { margin-bottom: 15px; font-size: 0.9rem; }
+
+        /* Main Content Styling */
+        .main-content {
+            padding: 40px;
+            color: var(--text-dark);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        .header h3 {
+            margin: 5px 0 20px;
+            color: var(--accent-color);
+            font-weight: 400;
+        }
+
+        section { margin-bottom: 30px; }
+
+        h2.section-title {
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .job { margin-bottom: 20px; }
+        .job-title { font-weight: bold; display: flex; justify-content: space-between; }
+        .job-company { color: var(--accent-color); font-style: italic; }
+        
+        .skill-tag {
+            display: inline-block;
+            background: var(--bg-gray);
+            padding: 5px 12px;
+            border-radius: 15px;
+            margin: 3px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .resume-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="resume-container">
+        <aside class="sidebar">
+            <div class="profile-img"></div>
+            <h1>Your Name</h1>
+            
+            <h2>Contact</h2>
+            <div class="sidebar-item">Email: hello@reallygoodsite.com</div>
+            <div class="sidebar-item">Phone: (555) 000-0000</div>
+            <div class="sidebar-item">Web: www.yourportfolio.com</div>
+
+            <h2>Design Skills</h2>
+            <div class="sidebar-item">Adobe Creative Suite</div>
+            <div class="sidebar-item">Figma / Sketch</div>
+            <div class="sidebar-item">Typography & Branding</div>
+
+            <h2>Technical Skills</h2>
+            <div class="sidebar-item">HTML5 / CSS3 (Sass)</div>
+            <div class="sidebar-item">JavaScript (ES6+)</div>
+            <div class="sidebar-item">Responsive Design</div>
+        </aside>
+
+        <main class="main-content">
+            <header class="header">
+                <h1>RESUME</h1>
+                <h3>Front-End Designer | Graphic Artist | CX Specialist</h3>
+                <p>A multi-disciplinary creative with a passion for building seamless user experiences. I bridge the gap between "looking good" and "working perfectly" while maintaining a client-first mindset.</p>
+            </header>
+
+            <section>
+                <h2 class="section-title">Experience</h2>
+                
+                <div class="job">
+                    <div class="job-title">
+                        <span>Front-End Web Designer</span>
+                        <span>2022 - Present</span>
+                    </div>
+                    <div class="job-company">Pixel Perfect Agency</div>
+                    <ul>
+                        <li>Developed responsive UI components using CSS Grid and Flexbox.</li>
+                        <li>Collaborated with marketing teams to create high-conversion landing pages.</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-title">
+                        <span>Graphic Designer & Customer Support</span>
+                        <span>2019 - 2022</span>
+                    </div>
+                    <div class="job-company">Print & Ship Co.</div>
+                    <ul>
+                        <li>Managed branding for 50+ local clients while overseeing daily storefront operations.</li>
+                        <li>Resolved complex client issues, maintaining a 98% satisfaction rating.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="section-title">Core Competencies</h2>
+                <span class="skill-tag">User Experience (UX)</span>
+                <span class="skill-tag">Conflict Resolution</span>
+                <span class="skill-tag">Project Management</span>
+                <span class="skill-tag">Visual Communication</span>
+                <span class="skill-tag">Technical Troubleshooting</span>
+            </section>
+
+            <section>
+                <h2 class="section-title">Education</h2>
+                <div class="job">
+                    <div class="job-title">B.F.A. in Graphic Design</div>
+                    <div class="job-company">University of Design & Arts</div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
